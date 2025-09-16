@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CDR Viewer</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<div class="header">
+    <h1>CDR Viewer by</h1>
+    <a href="https://serhetgokdemir.github.io/">serhetgokdemir</a>
+</div>
+
+<div class="sidebar">
+    <h2>Dosya Listesi</h2>
+    <ul id="fileList">
+        <!-- dosya listesi buradan dinamik doldurulacak -->
+    </ul>
+</div>
+
+<div class="content">
+    <form id="uploadForm">
+        <label for="path">Dosya Yolu:</label>
+        <input type="text" id="path" name="path" placeholder="Dosya Yolunu Giriniz (örn: /ortak/serhetgokdemir/ASCIIFileDirectory)">
+        <button type="submit">Yükle</button><br><br>
+    </form>
+
+    <!-- Search form (JS ile backend çağıracak) -->
+    <form id="searchForm">
+        <label for="key">Key:</label>
+        <input type="text" id="key" name="key">
+
+        <label for="value">Value:</label>
+        <input type="text" id="value" name="value">
+
+        <button type="submit">Ara</button>
+        <button type="button" id="saveBtn" disabled>Kaydet (.txt)</button>
+
+        <button type="button" id="clearBtn" disabled>Temizle</button>
+
+    </form>
+
+    <!-- Arama sonuç sayısı -->
+    <div id="resultCount"></div>
+
+    <!-- Arama sonuçları için konsol benzeri alan -->
+    <div id="results" class="console"></div>
+</div>
+
+<!-- JS dosyası -->
+<script th:src="@{/app.js}"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* Body */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Üst bar */
+.header {
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  gap: 10px;
+}
+
+.header h1 {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}
+
+.header a{
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header a:hover{
+    color: red;
+}
+
+/* Dosya listesini barindiran sol panel */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 225px;
+  height: calc(100vh - 60px);
+  background: #f1f1f1;
+  border-right: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.sidebar h2{
+    font-size: 18px;
+}
+
+#fileList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  width: 180px;
+}
+
+#fileList li {
+  display: block;
+  width: 100%;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  padding: 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#fileList li:focus,
+#fileList li:active,
+#fileList li.selected {
+  font-weight: bold;
+  outline: none;
+}
+
+/* İçerik */
+.content {
+  margin-left: 220px;
+  margin-top: 80px;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.path-form {
+  margin-bottom: 20px;
+}
+
+.path-form label {
+  font-weight: bold;
+}
+
+
+#results {
+  height: 400px;
+  overflow-y: auto;
+  background: #111;
+  color: #eee;
+  padding: 10px;
+  font-family: monospace;
+}
+
+/* Konsol görünümü */
+#results.console {
+  background-color: #111;
+  color: white;
+  font-family: monospace;
+  padding: 10px;
+  height: 600px;
+  overflow-y: auto;
+  border: 1px solid #444;
+  white-space: pre-line;
+  margin-top: 20px;
+}
+
+.block {
+  margin-bottom: 10px;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 5px;
+}
+
+
+
+#uploadForm input{
+    width:450px;
+    height: 20px;
+}
+
+#searchForm input{
+    height: 20px
+}
+
+#key{
+    width: 300px;
+}
+
+#value{
+    width: 300px;
+}
+
+.block {
+  font-family: monospace;
+  white-space: pre;   /* boşlukları ve satır başlarını koru */
+  margin-bottom: 20px;
+}
+
+.filename {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#resultCount{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 16px;
+}
